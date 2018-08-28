@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 char * test(size_t  m, size_t n, char in[m][n], char * result) {
+    int mt = m + 1;
+
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            result[i * (m + 1) + j] = in[i][j];
+            result[i * mt + j] = in[i][j];
         }
     }
 }
